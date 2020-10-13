@@ -1,7 +1,9 @@
 # influxdb-setup
 Docker script to programmatically setup an InfluxDB 2.0
 
-![Docker](https://github.com/julian-fh/influxdb-setup/workflows/Docker/badge.svg?branch=master)
+![Docker](https://github.com/julian-fh/influxdb-setup/workflows/Docker/badge.svg?branch=master) &nbsp;&nbsp;
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) &nbsp;&nbsp;
+[![GitHub](https://badgen.net/badge/icon/Find%20me%20on%20GitHub?icon=github&label)](https://github.com/julian-fh/influxdb-setup)
 
 The script was created for usage in `docker-compose.yml` files (see [Usage in Docker Compose](#usage-in-docker-compose)).
 However, you can use it in any environment you want. It is inspired by [Eficode's wait-for](https://github.com/eficode/wait-for) script.
