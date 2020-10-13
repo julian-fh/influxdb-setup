@@ -1,8 +1,10 @@
 # influxdb-setup
 Docker script to programmatically setup an InfluxDB 2.0
 
+![Docker](https://github.com/julian-fh/influxdb-setup/workflows/Docker/badge.svg?branch=master)
+
 The script was created for usage in `docker-compose.yml` files (see [Usage in Docker Compose](#usage-in-docker-compose)).
-However, you can use it in any environment you want.
+However, you can use it in any environment you want. It is inspired by [Eficode's wait-for](https://github.com/eficode/wait-for) script.
 
 The script uses the [official InfluxDB 2.0 image](https://quay.io/repository/influxdb/influxdb) which ensures compatibility to the specified InfluxDB version.
 Currently, **only InfluxDB 2.0.0-rc** is supported, more versions are planned.
@@ -13,9 +15,9 @@ The script will wait for a user-defined amount of time until the InfluxDB is ava
 The script has to be configured via the following (required) environment variables:
 
 -  `$TIMEOUT`            - The amount of seconds, the script should try to connect to the database
--  `$INFLUXDB_SCHEMA`       - Schema (`http` or `https`) of the InfluxDB instance
--  `$INFLUXDB_HOST`       - Host of the InfluxDB instance
--  `$INFLUXDB_PORT`       - Port of the InfluxDB instance
+-  `$INFLUXDB_SCHEMA`    - Schema (`http` or `https`) of the InfluxDB instance
+-  `$INFLUXDB_HOST`      - Host of the InfluxDB instance
+-  `$INFLUXDB_PORT`      - Port of the InfluxDB instance
 -  `$INFLUXDB_USER`      - The new username
 -  `$INFLUXDB_PW`        - The new password
 -  `$INFLUXDB_ORG`       - The new organization 
