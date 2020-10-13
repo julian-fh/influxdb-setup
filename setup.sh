@@ -7,7 +7,7 @@ echo "Checking InfluxDB connection ..."
 i=0
 until [ $i -ge $TIMEOUT ]
 do
-  nc -z $1 $2 && break
+  nc -z $INFLUX_HOST $INFLUX_PORT && break
 
   i=$(( i + 1 ))
 
@@ -23,4 +23,4 @@ fi
 
 echo "InfluxDB is up ..."
 
-influx setup -f --host $INFLUXDB_URL  -u $INFLUXDB_USER -p $INFLUXDB_PW -o $INFLUXDB_ORG -t $INFLUXDB_TOKEN -b $INFLUXDB_BUCKETID -r $INFLUXDB_RETENTION
+influx setup -f --host $INFLUXDB_SCHEMA"://"$INFLUXDB_HOST":"$INFLUXDB_PORT -u $INFLUXDB_USER -p $INFLUXDB_PW -o $INFLUXDB_ORG -t $INFLUXDB_TOKEN -b $INFLUXDB_BUCKETID -r $INFLUXDB_RETENTION
