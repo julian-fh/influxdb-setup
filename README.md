@@ -40,6 +40,7 @@ services:
         depends_on:
         - influx
         environment:
+            TIMEOUT: 20
             INFLUXDB_SCHEMA: "http"
             INFLUXDB_HOST: "influx"
             INFLUXDB_PORT: "8086"

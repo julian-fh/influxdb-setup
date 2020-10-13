@@ -7,7 +7,7 @@ echo "Checking InfluxDB connection ..."
 i=0
 until [ $i -ge $TIMEOUT ]
 do
-  nc -z $INFLUX_HOST $INFLUX_PORT && break
+  nc -z $INFLUXDB_HOST $INFLUXDB_PORT && break
 
   i=$(( i + 1 ))
 
