@@ -18,9 +18,7 @@ The script will wait for a user-defined amount of time until the InfluxDB is ava
 The script has to be configured via the following (required) environment variables:
 
 -  `$TIMEOUT`            - The amount of seconds, the script should try to connect to the database
--  `$INFLUXDB_SCHEMA`    - Schema (`http` or `https`) of the InfluxDB instance
--  `$INFLUXDB_HOST`      - Host of the InfluxDB instance
--  `$INFLUXDB_PORT`      - Port of the InfluxDB instance
+-  `$INFLUXDB_URL`       - URL of the InfluxDB instance
 -  `$INFLUXDB_USER`      - The new username
 -  `$INFLUXDB_PW`        - The new password
 -  `$INFLUXDB_ORG`       - The new organization 
@@ -46,9 +44,7 @@ services:
         - influx
         environment:
             TIMEOUT: 20
-            INFLUXDB_SCHEMA: "http"
-            INFLUXDB_HOST: "influx"
-            INFLUXDB_PORT: "8086"
+            INFLUXDB_URL: "http://influx:8086"
             INFLUXDB_TOKEN: "some-token"
             INFLUXDB_BUCKETID: "some-bucket"
             INFLUXDB_ORG: "organization"
